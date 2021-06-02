@@ -12,7 +12,30 @@ public class Biblioteca {
 //		• De cada prestamos interesa saber a qué alumno se le prestó el libro.
 //		• Cuando un alumno devuelve un libro, el mismo quedará habilitado para ser prestado nuevamente.
 //		• Cada préstamo tendrá un identificador único, alumno y libro involucrados.
-//		• Cuando la biblioteca tendrá la posibilidad de imprimir los libros que se pueden imprimir
+//		• Cuando la biblioteca tendrá la posibilidad de imprimir los libros que se pueden fotocopiables.
 	
-	public void __construct();
+	Estudiantes [] estudiantes;
+	Libro [] libros;
+
+	Biblioteca(Estudiantes[] estudiantes, Libro[] libros){
+		this.estudiantes = estudiantes;
+		this.libros = libros;		
+	}
+	
+	public static void main(String args[]) {
+	 
+	}
+
+	public boolean prestar(Libro libro, Estudiantes estudiante) {
+		if (estudiante.maxLibros()) {
+		return false;
+		}
+		if (libro.prestar(estudiante.nombre, estudiante.apellido, estudiante.DNI)){	
+		return false; 
+		}
+		estudiante.prestar(libro); 
+		return true;
+	}
+	
+	
 }
