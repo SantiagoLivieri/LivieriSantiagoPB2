@@ -7,7 +7,10 @@ public class Estudiantes {
 	
 	int DNI;
 	String apellido;
-	String Nombre; 
+	String nombre; 
+	
+	Libro [] librosPrestados = new Libro[2];  
+
 	
 	//cantidadDeLibrosPrestados;
 }

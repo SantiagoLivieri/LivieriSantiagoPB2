@@ -5,14 +5,26 @@ public class Libro {
 //	• De los libros interesa registrar código, nombre y autor.
 	
 	
-	
+	String eNombre;
+	String eApellido;
+	int eDNI; 
 	int codigo;
 	String nombre;
 	String autor;
-	boolean presatado; 
+	boolean prestado; 
 	String contenido;
 	
-	public function Prestar ( );
+	public boolean prestar  (String eNombre, String eApellido, int eDNI) {
+	 if (prestado) {
+		 return false; 
+	 }
+	 
+	  prestado = true; 
+	  this.eNombre = eNombre;
+	  this.eApellido = eApellido;
+	  this.eDNI = eDNI;
+	  return true; 
+	}
 	
 	 
 }

@@ -14,5 +14,5 @@ public class Biblioteca {
 //		• Cada préstamo tendrá un identificador único, alumno y libro involucrados.
 //		• Cuando la biblioteca tendrá la posibilidad de imprimir los libros que se pueden imprimir
 	
-	List<int[]> prestados = new ArrayList<int[]>();
+	public void __construct();
 }
